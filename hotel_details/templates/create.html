@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+<form method="POST" style="margin: 20px; ">
+    {% csrf_token %} 
+        <div class="form-group">
+          <label for="formGroupExampleInput">Name</label>
+          <input name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name of the hotel">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Address</label>
+          <input type="text" name="address" class="form-control" id="formGroupExampleInput2" placeholder="Hotel Address">
+        </div>
+        <div class="form-group">
+                <label for="formGroupExampleInput2">URL</label>
+                <input type="url" name="url" class="form-control" id="formGroupExampleInput2" placeholder="Website">
+              </div>
+              Fill the Description: 
+              <br />
+              
+                  <textarea class="form-control" rows="5" id="comment" name = "description" class="form-group">
+                        
+                     </textarea><br>
+                     <button type="submit" class="btn btn-primary">Create</button>
+      </form>
+
+{% endblock %}
